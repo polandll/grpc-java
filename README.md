@@ -97,7 +97,7 @@ Everything worked!
 
 ## 4. Execute the main class for Astra
 
-You will need an [Astra Database]() with an Astra Token[](#)
+You will need an [Astra Database](https://docs.datastax.com/en/astra/docs/creating-your-astra-database.html) with an [Astra Token](https://docs.datastax.com/en/astra/docs/manage-application-tokens.html)
 
 In class `ConnectAstra` edit the following properties
 
