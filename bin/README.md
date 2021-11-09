@@ -13,12 +13,12 @@ docker -v
 docker run hello-world
 ```
 
-#### 📦 Java Development Kit (JDK) 11+
-- Use the [reference documentation](https://www.oracle.com/java/technologies/java-se-development-kit11-downloads.html) to install a **Java Development Kit**
+#### 📦 Java Development Kit (JDK) 8+
+- Use the [reference documentation](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html) to install a **Java Development Kit**
 - Validate your installation with
 
 ```bash
-java -version
+java --version
 ```
 
 #### 📦 Apache Maven
@@ -40,7 +40,7 @@ Download [Stargate docker image](https://hub.docker.com/r/stargateio/stargate-3_
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/stargateio/stargate-3_11/v1.0.40)
 
 ```bash
-docker pull stargateio/stargate-3_11:v1.0.41
+docker pull stargateio/stargate-3_11:v1.0.40
 ```
 
 #### ✅ Step 2b: Start stargate container in *development* mode.
@@ -56,7 +56,7 @@ docker run --name stargate \
   -e CLUSTER_NAME=stargate \
   -e CLUSTER_VERSION=3.11 \
   -e DEVELOPER_MODE=true \
-  stargateio/stargate-3_11:v1.0.41
+  stargateio/stargate-3_11:v1.0.40
 ```
 
 With Development mode Stargate also the role of a data node, you do not need an extra Cassandra container.
@@ -79,7 +79,7 @@ After 30 seconds you should be able to following URLs:
 You can now run the example
 
 ```
-mvn install exec:java -Dexec.mainClass=com.datastax.tutorial.ConnectStargate
+mvn exec:java -Dexec.mainClass="com.datastax.tutorial.ConnectStargate"
 ```
 
 **Expected output**
@@ -111,6 +111,6 @@ private static final String ASTRA_KEYSPACE   = "<keyspace>";
 Then execute the class 
     
 ```
-mvn install exec:java -Dexec.mainClass=com.datastax.tutorial.ConnectAstra
+mvn exec:java -Dexec.mainClass="com.datastax.tutorial.ConnectAstra"
 ```
 
