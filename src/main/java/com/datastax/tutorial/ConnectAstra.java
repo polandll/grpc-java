@@ -52,11 +52,11 @@ public class ConnectAstra {
                 QueryOuterClass.Batch.newBuilder()
                     .addQueries(
                         QueryOuterClass.BatchQuery.newBuilder()
-                            .setCql("INSERT INTO " + ASTRA_KEYSPACE + ".users (firstname, lastname) VALUES('Lorina', 'Poland')")
+                            .setCql("INSERT INTO " + ASTRA_KEYSPACE + ".users (firstname, lastname) VALUES('Jane', 'Doe')")
                             .build())
                     .addQueries(
                         QueryOuterClass.BatchQuery.newBuilder()
-                            .setCql("INSERT INTO " + ASTRA_KEYSPACE + ".users (firstname, lastname) VALUES('Doug', 'Wettlaufer')")
+                            .setCql("INSERT INTO " + ASTRA_KEYSPACE + ".users (firstname, lastname) VALUES('Serge', 'Provencio')")
                             .build())
                     .build());
         System.out.println("2 rows have been inserted in table users.");
